@@ -18,8 +18,7 @@
     width: 25rem;
     height: 25rem;
 
-    justify-content: center;
-    gap: 4rem;
+    justify-content: space-around;
     align-items: center;
 
     border: 1px solid var(--color-theme-gray);
@@ -27,14 +26,29 @@
 
     background-color: var(--color-theme-blue);
 }
+.title-auth-area{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+.Area-auth h1{
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: -2rem;
+}
+.Area-auth h1 span{
+    color: var(--color-theme-red);
+}
 
 .Auth-inputs-area{
-width: max-content;
-height: max-content;
+    width: max-content;
+    height: max-content;
 
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
 }
 
@@ -62,11 +76,23 @@ justify-content: space-around;
     cursor: pointer;
 }
 
+.area-bt-auth{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
 .bt-Auth{
     width: 10rem;
     height: 2rem;
     border-radius: 5px;
     border: none;
+
+    margin-top: -2rem;
 
     background-color: var(--color-theme-red);
     color: #fff;
@@ -76,4 +102,14 @@ justify-content: space-around;
 .bt-Auth:hover{
     cursor: pointer;
     transform: scale(1.2);
+}
+
+.area-bt-auth span{
+ font-size: 0.7rem;
+ color: #fff;
+ padding-top: 1rem;
+}
+
+.area-bt-auth span b:hover{
+cursor: pointer;
 }
