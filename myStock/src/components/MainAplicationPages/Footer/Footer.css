@@ -1,0 +1,9 @@
+@import "../../../assets/colors.css";
+
+.Footer{
+    width: 100%;
+    height: 4rem;
+
+    background-color: var(--color-theme-blue);
+    
+}
