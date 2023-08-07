@@ -1,10 +1,11 @@
 import './App.css'
+import AuthHome from './components/AuthHome/AuthHome'
 
 function App() {
 
   return (
     <>
-     ola mundo
+     <AuthHome></AuthHome>
     </>
   )
 }
