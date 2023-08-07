@@ -1,11 +1,12 @@
 import './App.css'
-import AuthHome from './components/AuthHome/AuthHome'
+import AuthHome from './components/authHome/AuthHome'
+import Register from './components/register/Register'
 
 function App() {
 
   return (
     <>
-     <AuthHome></AuthHome>
+     <Register></Register>
     </>
   )
 }
