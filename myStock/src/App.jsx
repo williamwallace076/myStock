@@ -15,7 +15,9 @@ const App = () => {
       <>
         <div style={{display:'flex', flexDirection:'row'}}>
 
-          <Sidebar></Sidebar>
+
+            <Sidebar></Sidebar>
+ 
         
           <div style={{display:'flex', flexDirection:'column', width:'100%'}} >
             <Header></Header>

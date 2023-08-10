@@ -9,7 +9,7 @@ export default props  => {
     return(
 
         <Routes>
-            <Route exact path="/" element={<AuthHome></AuthHome>}/>
+            <Route exact path="/" element={<Home></Home>}/>
             <Route path="/Home" element={<Home></Home>} />
         </Routes>
 
