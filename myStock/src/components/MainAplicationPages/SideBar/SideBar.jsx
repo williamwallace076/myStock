@@ -9,9 +9,9 @@ const Sidebar = () => {
             <div className="nav-area">
                 <nav className="nav-menu">
                     <a href="Home" className="nav-item-sidebar">Geral</a>
-                    <div className="nav-item-sidebar">Estoque</div>
-                    <div className="nav-item-sidebar">Cadastrar Produto</div>
-                    <div className="nav-item-sidebar">Nova Venda</div>
+                    <a href="Stock" className="nav-item-sidebar">Estoque</a>
+                    <a href="NewProduct" className="nav-item-sidebar">Cadastrar <br /> Produto</a>
+                    <a href="Sell" className="nav-item-sidebar">Nova <br /> Venda</a>
                 </nav>
             </div>
         </div>
