@@ -1,27 +1,22 @@
 import "./NewProduct.css";
 
 import React from 'react';
+import TableProduct from "./table/Table";
+import CadProdConteiner from "./CadProd/CadProdConteiner";
 
 const NewProduct = () => {
     return ( 
         <div className="newProduct">
 
-        <h2 className="title-newProduct">Cadastrar Novo Produto</h2>
+        <h2 className="title-newProduct">Produtos Cadastrados</h2>
+        
+        <CadProdConteiner></CadProdConteiner>
 
         <div className="newProduct-area">
-            <form className="form-newProduct" action="">
-                <label htmlFor="name">Nome do Produto</label>
-                <input id="name" className="name-product" type="text" />
-                <label htmlFor="desc">Descrição do produto</label>
-                <input id="desc" className="description-product" type="text" />
-                <label htmlFor="quanty">Quantidade</label>
-                <input id="quanty" className="quantity" type="number" />
-                <label htmlFor="price">Preço do Produto</label>
-                <input id="price" className="price" type="text" />
-
-
-                <button type="">Cadastrar novo Produto</button>
-            </form>
+            <div className="product-buttons">
+                <button className="cad-prod-btn">Cadastrar Novo Produto</button>
+            </div>
+            <TableProduct></TableProduct>
         </div>
 
         </div>
