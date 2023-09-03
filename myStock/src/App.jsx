@@ -6,13 +6,14 @@ import Home from './components/MainAplicationPages/Home/Home';
 import Sidebar from './components/MainAplicationPages/SideBar/SideBar';
 import AuthHome from './components/authHome/AuthHome';
 import Register from './components/register/Register';
+import ConponentProvider from './contexts/Statecomponents';
 
 import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
   return ( 
   
-      <>
+      <ConponentProvider>
         <div style={{display:'flex', flexDirection:'row'}}>
 
 
@@ -32,7 +33,7 @@ const App = () => {
             
           </div>
         </div>
-      </>
+      </ConponentProvider>
   
     );
 }
