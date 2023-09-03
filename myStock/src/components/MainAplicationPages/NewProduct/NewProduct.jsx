@@ -1,10 +1,16 @@
 import "./NewProduct.css";
 
-import React from 'react';
+import React, {useContext} from 'react';
 import TableProduct from "./table/Table";
 import CadProdConteiner from "./CadProd/CadProdConteiner";
+import { ComponentsContext } from "../../../contexts/Statecomponents";
+
 
 const NewProduct = () => {
+
+
+    const {setFormNewProd} = useContext(ComponentsContext)
+
     return ( 
         <div className="newProduct">
 
@@ -14,7 +20,7 @@ const NewProduct = () => {
 
         <div className="newProduct-area">
             <div className="product-buttons">
-                <button className="cad-prod-btn">Cadastrar Novo Produto</button>
+                <button onClick={()=> setFormNewProd('flex')} className="cad-prod-btn">Cadastrar Novo Produto</button>
             </div>
             <TableProduct></TableProduct>
         </div>

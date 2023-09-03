@@ -1,8 +1,14 @@
-import React from 'react';
-import "./Table.css"
+import React, { useContext, useState } from 'react';
+import "./Table.css";
+import { ComponentsContext } from "../../../../contexts/Statecomponents";
 
 
 const TableProduct = () => {
+
+    
+    const {allProducts} = useContext(ComponentsContext)
+
+
     return ( 
             <table className="product-table" border={1}>
                 <caption>Todos os Produtos</caption>
@@ -17,33 +23,23 @@ const TableProduct = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><p>Camisa Cowntry</p></td>
-                        <td><p>100% algodão</p></td>
-                        <td><p>kelvin cleen</p></td>
-                        <td><p>Camisas</p></td>
-                        <td><p>R$ 12,99</p></td>
-                        <td><p>0000001</p></td>
-                        <td><p>&nbsp;</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>Calça Jeans</p></td>
-                        <td><p>100% poliester</p></td>
-                        <td><p>adids</p></td>
-                        <td><p>Calças</p></td>
-                        <td><p>R$ 20,99</p></td>
-                        <td><p>0000002</p></td>
-                        <td><p>&nbsp;</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>Sapatenis</p></td>
-                        <td><p>Flexivel</p></td>
-                        <td><p>neique</p></td>
-                        <td><p>Sapatos</p></td>
-                        <td><p>R$ 50,99</p></td>
-                        <td><p>0000003</p></td>
-                        <td><p>&nbsp;</p></td>
-                    </tr>
+
+                   {/* {
+                   allProducts.length > 0? 
+                    allProducts.map((item)=>{
+                        <tr>
+                            <td>{allProducts[item].name}</td>
+                            <td>{allProducts[item].desc}</td>
+                            <td>{allProducts[item].mark}</td>
+                            <td>{allProducts[item].category}</td>
+                            <td>{allProducts[item].price}</td>
+                            <td>{allProducts[item].code}</td>
+                            <td></td>
+                        </tr>
+                   })}  : 
+                    <><span>nao produtos aqui</span></>
+                } */}
+                   
                 </tbody>
             </table>
      );

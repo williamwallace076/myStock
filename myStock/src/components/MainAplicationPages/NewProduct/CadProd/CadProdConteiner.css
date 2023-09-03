@@ -32,7 +32,11 @@
     height: 2rem;
     border: 1px solid var(--color-theme-gray);
     border-radius: 5px;
+    padding-left: 1rem;
 
+}
+input.input-file{
+    padding-left: 0;
 }
 
 .form-inputs-group-1,.form-inputs-group-2, .form-inputs-group-3{

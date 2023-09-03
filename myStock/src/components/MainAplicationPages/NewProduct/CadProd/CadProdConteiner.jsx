@@ -1,26 +1,61 @@
-import React from 'react';
+import React, {useContext, useState, useEffect, useRef} from 'react';
 import "./CadProdConteiner.css";
+import { ComponentsContext } from "../../../../contexts/Statecomponents";
 
 const CadProdConteiner = () => {
 
-    
+    const name = useRef()
+    const desc = useRef()
+    const mark = useRef()
+    const categ = useRef()
+    const price = useRef()
+    const code = useRef()
+    const quanty = useRef()
+
+    const {formNewProd, setFormNewProd, formInfo, setFormInfo, updateAllProductsList } = useContext(ComponentsContext)
+
+
+    const getFormularyInfo = ()=>{
+        setFormNewProd("none")
+        console.log(formInfo)
+
+        setFormInfo({
+            name: name.current.value,
+            description : desc.current.value,
+            mark: mark.current.value,
+            category: categ.current.value,
+            price:price.current.value,
+            code:code.current.value, 
+            quantity: quanty.current.value
+        })
+
+        updateAllProductsList()
+
+    }
+
+
+
+    const noSubmit =(e)=>{
+        e.preventDefault()
+    }
+
     return ( 
-        <div className='form-area' style={{display:'none'}}>
-            <form className="form-newProduct" action="">
+        <div className='form-area' style={{display:formNewProd}}>
+            <form className="form-newProduct" onSubmit={noSubmit} >
                 <div className='form-inputs-group-1'>
                     <div className='area-input-label'>
                     <label htmlFor="name">Nome do Produto</label>
-                    <input id="name" className="name-product" type="text" />
+                    <input id="name" ref={name} className="name-product" type="text" />
                     </div>
 
                     <div className='area-input-label'>
                     <label htmlFor="quanty">Quantidade</label>
-                    <input id="quanty" className="quantity" type="number" />
+                    <input id="quanty" ref={quanty} className="quantity" type="number" />
                     </div>
                     
                     <div className='area-input-label'>
                     <label htmlFor="price">Preço do Produto</label>
-                    <input id="price" className="price" type="text" />
+                    <input id="price" ref={price} className="price" type="text" />
                     </div>
                 </div>
                 
@@ -29,13 +64,13 @@ const CadProdConteiner = () => {
                 <div className='form-inputs-group-2'>
                     <div className='area-input-label'>
                         <label htmlFor="desc">Descrição do produto</label>
-                        <input id="desc" className="description-product" type="text" />
+                        <input id="desc" ref={desc}  className="description-product" type="text" />
                     </div>
 
                     <div className='area-input-label'>
-                        <label for="Category">Categoria do Produto</label>
-                        <select className='input-select' id="Category" name="category">
-                                <option value="none" disabled></option>
+                        <label htmlFor="Category">Categoria do Produto</label>
+                        <select className='input-select' id="Category"ref={categ}  name="category">
+                                <option value=""></option>
                                 <option value="Camisas">Camisas</option>
                                 <option value="Calças">Calças</option>
                                 <option value="sapatos">Sapatos</option>
@@ -57,9 +92,9 @@ const CadProdConteiner = () => {
                     </div>
 
                     <div className='area-input-label'>
-                        <label for="marca">Marca do Produto</label>
-                        <select className='input-select' id="marca" name="marca">
-                                <option value="none" disabled></option>
+                        <label htmlFor="marca">Marca do Produto</label>
+                        <select className='input-select' id="marca" ref={mark} name="marca">
+                                <option value="" ></option>
                                 <option value="kelvin cleen">kelvin cleen</option>
                                 <option value="adids">adids</option>
                                 <option value="neique">neique</option>
@@ -68,12 +103,12 @@ const CadProdConteiner = () => {
 
                     <div className='area-input-label'>
                         <label htmlFor="code">Código do Produto</label>
-                        <input id="code" className="code" type="number" min={0} />
+                        <input id="code" ref={code} className="code" type="number" min={0} />
                     </div>
                 </div>
 
 
-                <button className='form-cad-btn' >Cadastrar</button>
+                <button className='form-cad-btn' onClick={getFormularyInfo} >Cadastrar</button>
             </form>
         </div>
      );
