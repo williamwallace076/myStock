@@ -2,8 +2,10 @@ import React from 'react';
 import "./CadProdConteiner.css";
 
 const CadProdConteiner = () => {
+
+    
     return ( 
-        <div className='form-area'>
+        <div className='form-area' style={{display:'none'}}>
             <form className="form-newProduct" action="">
                 <div className='form-inputs-group-1'>
                     <div className='area-input-label'>
