@@ -1,13 +1,13 @@
 import "./Header.css";
-
+import imgUser from "../../../assets/17004.png"
 import React from 'react';
 
 const Header = () => {
     return ( 
         <div className="Header">
-            <span className="header-title">MyStack!</span>
-            <div className="User Menu">
-                <img src="" alt="User Image" />
+            <div className="User-menu">
+                <img src={imgUser} alt="User Image" />
+                <span className="Name User">Bem vindo, Usuário !</span>
             </div>
         </div>
      );
