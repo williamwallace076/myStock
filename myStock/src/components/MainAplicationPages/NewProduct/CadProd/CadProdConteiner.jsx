@@ -5,6 +5,7 @@ import { ComponentsContext } from "../../../../contexts/Statecomponents";
 const CadProdConteiner = () => {
 
     const name = useRef()
+    // let newNameState = name.target.value
     const desc = useRef()
     const mark = useRef()
     const categ = useRef()
@@ -12,28 +13,28 @@ const CadProdConteiner = () => {
     const code = useRef()
     const quanty = useRef()
 
-    const {formNewProd, setFormNewProd, formInfo, setFormInfo, updateAllProductsList } = useContext(ComponentsContext)
+    const {formNewProd, setFormNewProd} = useContext(ComponentsContext)
 
+    const [formInfo, setFormInfo] = useState({
+        name: "",
+        description : "",
+        mark: "",
+        category:"",
+        price:"",
+        code:"", 
+        quantity: ""
+    })
 
     const getFormularyInfo = ()=>{
         setFormNewProd("none")
-        console.log(formInfo)
+        console.log(formInfo);
+        console.log(newNameState)
 
-        setFormInfo({
-            name: name.current.value,
-            description : desc.current.value,
-            mark: mark.current.value,
-            category: categ.current.value,
-            price:price.current.value,
-            code:code.current.value, 
-            quantity: quanty.current.value
-        })
+        useEffect(()=>{
 
-        updateAllProductsList()
+        },[])
 
     }
-
-
 
     const noSubmit =(e)=>{
         e.preventDefault()
