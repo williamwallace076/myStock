@@ -1,5 +1,10 @@
 import './Home.css';
 import React from 'react';
+import OverviewItem from './overviewItem/OverviewItem';
+import overViewImg1 from "../../../assets/591965.png"
+import overViewImg2 from "../../../assets/591965.png"
+import overViewImg3 from "../../../assets/2660366.png"
+import overViewImg4 from "../../../assets/3176088.png"
 
 const Home = () => {
 
@@ -11,22 +16,10 @@ const Home = () => {
                 <h2 className="title-General">Visão Geral </h2>
 
                 <div className='overview-area'>
-                    <div className="item-overview" style={{backgroundColor:"lightblue"}}>
-                        <h3 className="title-item-overview">Vendas Hoje</h3>
-                        <span className="info-item-overview">45</span>
-                    </div>
-                    <div className="item-overview" style={{backgroundColor:"lightgreen"}}>
-                        <h3 className="title-item-overview">Produtos</h3>
-                        <span className="info-item-overview">80</span>
-                    </div>
-                    <div className="item-overview" style={{backgroundColor:"lightcoral"}}>
-                        <h3 className="title-item-overview">Total Prod. Vendidos</h3>
-                        <span className="info-item-overview">60</span>
-                    </div>
-                    <div className="item-overview" style={{backgroundColor:"lightyellow"}}>
-                        <h3 className="title-item-overview">Prod. restantes</h3>
-                        <span className="info-item-overview">20</span>
-                    </div>
+                    <OverviewItem img={overViewImg1} value={180} title={"Vendas hoje"} count={"45"}></OverviewItem>
+                    <OverviewItem img={overViewImg2} value={345} title={"Vendas este mês"} count={"80"}></OverviewItem>
+                    <OverviewItem img={overViewImg3} value={546} title={"Total Vendidos"} count={"120"}></OverviewItem>
+                    <OverviewItem img={overViewImg4} value={180} title={"Prod. Em estoque"} count={"20"}></OverviewItem>
                 </div>
 
             </div>

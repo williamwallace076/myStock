@@ -1,7 +1,7 @@
 .Home{
     width: 100%;
     height: max-content;
-
+    background-color: var(--color-theme-midWhite);
 
     display: flex;
     flex-direction: column;
@@ -34,33 +34,9 @@
     height: max-content;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
 
 }
-
-.item-overview{
-    width: 10rem;
-    height: 7rem;
-
-    border-radius: 1rem;
-
-    border: 1px solid var(--color-theme-gray);
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.title-item-overview{
-    font-size: 1rem;
-}
-
-
-
-
-
 
 
 
