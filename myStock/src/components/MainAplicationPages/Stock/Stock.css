@@ -1,0 +1,47 @@
+.Stock-area{
+    padding: 1rem 0 1rem 1rem;
+    width: max-content;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.title-stock{
+    margin-bottom: 1rem;
+}
+
+.stock-main-area{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+}
+
+.stock-item-area{
+    width: max-content;
+    height: 28.7rem;
+    overflow-x: scroll;
+
+}
+
+.stock-item{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    width:50rem;
+    height: 2rem;
+}
+
+.filter-area{
+    height: max-content;
+    width: 20rem;
+
+    display: flex;
+    flex-direction: column;
+}

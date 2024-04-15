@@ -1,0 +1,81 @@
+@import "../../../assets/colors.css";
+
+.Sidebar{
+    width: 15rem;
+    height: 100vmax;
+    background: linear-gradient(264deg, rgba(70,197,226,1) 2%, rgba(14,20,105,1) 95%);
+    color: #fff;
+
+    border-right: 1px solid var(--color-theme-gray);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 2rem;
+}
+
+.nav-area{
+
+    width: 100%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title-sidebar{
+
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-theme-blue);
+    margin-bottom: 3rem;
+}
+
+.nav-menu{
+
+    width: 100%;
+    align-items: center;
+    
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item-sidebar{
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    
+
+    height: 3rem;
+
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    border-radius: 3px;
+
+}
+
+
+.nav-item-sidebar:hover{
+cursor: pointer;
+width: 50%;
+background-color: rgba(0, 0, 0, 0.1);
+transform: scale(1.2);
+}
