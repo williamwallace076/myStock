@@ -1,0 +1,98 @@
+.sell-product{
+    width: max-content;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem 0 1rem 1rem;
+
+
+}
+
+.title-sell-product{
+    margin-bottom: 1rem;
+}
+
+.sell-product-area{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    gap: 4rem;
+}
+
+.sell-product-area button{
+
+    width: 5rem;
+    height: 2.5rem;
+    background: transparent;
+   
+    border-radius: 5px;
+    border: 1px solid var(--color-theme-gray);
+    font-weight: bolder;
+
+    transition: 0.3s;
+}
+.sell-product-area button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color: var(--color-theme-green);
+    border: none;
+}
+
+.main-sell-product-area, .search-product-area{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+}
+
+.search-product-area{
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-around;
+
+    margin-bottom: 1rem;
+
+}
+
+
+.sell-item{
+    display: flex;
+    flex-direction: row;
+
+    width: 40rem;
+    height: 3rem;
+
+    justify-content: space-around;
+}
+
+
+
+.sell-product-side-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.total-area, .total-products{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: right;
+
+    width: 20rem;
+}
+
+.sell-product-side-area button{
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    border: 1px solid var(--color-theme-gray);
+    border-radius: 5px;
+}
+
+.sell-product-side-area button:hover{
+    cursor: pointer;
+    background-color: var(--color-theme-red);
+}
