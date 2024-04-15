@@ -1,5 +1,7 @@
 # React + Vite
 
+modificação de readme para verificação de push remota
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
