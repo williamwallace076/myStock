@@ -77,3 +77,37 @@ margin-bottom: 1rem;
     border: 1px solid var(--color-theme-gray);
     
 }
+
+.last-sells-table{
+width: max-content;
+border-collapse: collapse;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+height: max-content;
+
+}
+
+.last-sells-table th, .last-sells-table td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    min-width: 12rem;
+    text-align: center;
+}
+
+.last-sells-table th {
+    background-color: var(--color-theme-midWhite);
+  }
+
+  .last-sells-table:nth-child(even) {
+    background-color: var(--color-theme-midWhite);
+  }
+
+  .last-sells-table tr:hover {
+    background-color: #ddd;
+  }
+
+  .last-sells-table td:last-child {
+    text-align: center;
+  }
