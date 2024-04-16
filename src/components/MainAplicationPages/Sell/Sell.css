@@ -1,5 +1,5 @@
 .sell-product{
-    width: max-content;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,15 +16,16 @@
 .sell-product-area{
     display: flex;
     flex-direction: row;
-    width: max-content;
+    width: 100%;
     height: max-content;
-    gap: 4rem;
+    justify-content: space-around;
 }
 
-.sell-product-area button{
+
+.search-product-area button{
 
     width: 5rem;
-    height: 2.5rem;
+    height: 2.1rem;
     background: transparent;
    
     border-radius: 5px;
@@ -33,8 +34,8 @@
 
     transition: 0.3s;
 }
-.sell-product-area button:hover{
-    transform: scale(1.2);
+.search-product-area button:hover{
+    transform: scale(1.1);
     cursor: pointer;
     background-color: var(--color-theme-green);
     border: none;
@@ -48,8 +49,13 @@
 }
 
 .search-product-area{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     justify-content: space-around;
 
     margin-bottom: 1rem;
@@ -57,15 +63,74 @@
 }
 
 
+
+.product-id{
+
+
+    width: 18rem;
+    height: 2rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 1px solid var(--color-theme-gray);
+    border-radius: 3px;
+    
+
+}
+
+
 .sell-item{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    width: 40rem;
-    height: 3rem;
+    width: max-content;
+    height: max-content;
+    border-collapse: collapse;
+    gap: 1rem;
 
     justify-content: space-around;
 }
+
+.sell-item th,.sell-item td{
+    border: 1px solid #ddd;
+    max-width: 8rem;
+    min-width: 8rem;
+    word-wrap: break-word;
+    height: 2rem;
+    text-align: center;
+}
+
+
+.sell-item th {
+    background-color: var(--color-theme-midWhite);
+  }
+
+  .sell-item:nth-child(even) {
+    background-color: var(--color-theme-midWhite);
+  }
+
+  .sell-item tr:hover {
+    background-color: #ddd;
+  }
+
+  .sell-item td:last-child {
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -90,6 +155,7 @@
     background-color: transparent;
     border: 1px solid var(--color-theme-gray);
     border-radius: 5px;
+    margin-top: 1rem;
 }
 
 .sell-product-side-area button:hover{

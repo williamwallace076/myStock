@@ -1,9 +1,12 @@
 import "./Sell.css";
 
 import React from 'react';
+import { listProducts } from "../../../api/dbProducts"
 
 const Sell = () => {
-    return ( 
+
+    const esconder = true;
+    return (
         <div className="sell-product">
             <h2 className="title-sell-product">Nova Venda</h2>
 
@@ -11,36 +14,42 @@ const Sell = () => {
 
                 <div className="main-sell-product-area">
                     <div className="search-product-area">
-                        <label htmlFor="product-id" >Código ou Nome do Produto</label>
-                        <input id="product-id" className="code" type="text" />
-                        <span><button>Search 🔎</button></span>
+                        <input id="product-id" placeholder="Código ou nome do produto" className="product-id" type="text" />
+                        <span><button>Procurar🔎</button></span>
                     </div>
 
                     <div className="product-item-area">
 
-                        <div className="sell-item">
-                                <div>
-                                    <p>nome produto</p>
-                                </div>
-                                <div>
-                                    <p>descrição</p>
-                                </div>
-                                <div>
-                                    <p>R$10,00</p>
-                                </div>
-                                <div>
-                                    <p>1</p>
-                                </div>
-                                <div>
-                                    <p>R$ 10,00</p>
-                                </div>
-                                <div>
-                                    <p>Adicionar</p>
-                                </div>
-                                <div>
-                                    <p>Remover</p>
-                                </div>
-                        </div>
+                            <table className="sell-item">
+                                <thead>
+                                    <tr className="row-table-head">
+                                        <th>Nome do Produto</th>
+                                        <th>Valor da Unidade (R$)</th>
+                                        <th>Total de Unidades</th>
+                                        <th>Valor Total (R$)</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                {esconder == true ? (<div>Procure por um produto !</div>
+
+                        ) : (
+                                <tbody>
+                                    {listProducts.map(item => (
+                                        <tr key={item.id}>
+                                            <td>{item.nome}</td>
+                                            <td>{item.valor.toFixed(2)}</td>
+                                            <td>{item.quantity}</td>
+                                            <td>{(item.valor * item.quantity).toFixed(2)}</td>
+                                            <td>
+                                                <div className="actions"><button className="add">Adicionar</button><button className="rem">Remover</button></div>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                        )}
+                            </table>
+
+
                     </div>
                 </div>
 
@@ -60,7 +69,7 @@ const Sell = () => {
 
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default Sell;
