@@ -13,7 +13,7 @@ const Stock = () => {
 
             <div className="stock-main-area">
                 <div className="stock-item-area">
-                <table className="stock-table">
+                    <table className="stock-table">
                         <thead>
                             <tr>
                                 <th>Nome do Produto</th>
@@ -38,14 +38,16 @@ const Stock = () => {
                 </div>
 
                 <div className="filter-area">
-                    <h2>Filtros</h2>
-                    <select name="Tipo" id="1">
+                    <div className="filter-header"><h2>Filtros</h2><button className="clean-filter-bt">Limpar</button></div>
+                    <label className="filter-label" htmlFor="1">Tipo</label>
+                    <select className="filter-select" name="type" id="1">
                         <option value="Tipo" disabled>Tipo</option>
                         <option value="Camisa">Camisa</option>
                         <option value="Calça">Calça</option>
                         <option value="Bolsa">Bolsa</option>
                     </select>
-                    <select name="Nome" id="2">
+                    <label className="filter-label" htmlFor="2">Ordem</label>
+                    <select className="filter-select" name="order" id="2">
                         <option value="nome" disabled>Nome</option>
                         <option value="atoz">De A a Z </option>
                         <option value="ztoa">De Z a A </option>
