@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState} from "react";
+import { listProducts } from "../api/dbProducts";
 
 
 export const ComponentsContext = createContext(0)
@@ -20,7 +21,7 @@ const ConponentProvider = ({children}) => {
         quantity: ""
     })
 
-    const [allProducts, setAllProducts] = useState([])
+    const [allProducts, setAllProducts] = useState(listProducts)
 
     
 

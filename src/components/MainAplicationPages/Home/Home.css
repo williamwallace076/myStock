@@ -100,8 +100,8 @@ height: max-content;
     background-color: var(--color-theme-midWhite);
   }
 
-  .last-sells-table:nth-child(even) {
-    background-color: var(--color-theme-midWhite);
+  .last-sells-table tr:nth-child(even) {
+    background-color:#fff;
   }
 
   .last-sells-table tr:hover {
